@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  atlas-pubsub:
+  - apiVersion: v1
+    appVersion: 0.2.2
+    created: 2018-12-20T15:52:46.732392-08:00
+    description: A Helm chart for Kubernetes
+    digest: 719ae297b63c0f2ddde10356b1651d5e25603deecbab3e524343715e6c96eeb2
+    keywords:
+    - atlas
+    - pubsub
+    name: atlas-pubsub
+    sources:
+    - https://github.com/infobloxopen/atlas-pubsub
+    urls:
+    - atlas-pubsub-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-12-20T15:52:46.731523-08:00
