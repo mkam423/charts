@@ -16,4 +16,4 @@ before_script:
 script:
   - git remote add k8s ${CHART_REPO}
   - git fetch k8s
-  - docker exec ${CONTAINER_NAME} ct lint --chart-dirs incubator --remote k8s
+  - docker exec ${CONTAINER_NAME} ct lint --charts incubator/atlas-pubsub --remote k8s
