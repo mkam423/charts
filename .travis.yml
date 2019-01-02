@@ -3,13 +3,17 @@ services:
 
 env:
   global:
+    - CHART_REPO=https://github.com/infobloxopen/charts
     - IMAGE_TAG=v2.0.1
     - IMAGE_REPOSITORY=quay.io/helmpack/chart-testing
+    - CONTAINER_NAME=chart_test
 
 before_script:
   - echo ${IMAGE_TAG}
   - echo ${IMAGE_REPOSITORY}
-  - docker container run --interactive --tty --detach --volume "$(pwd):/workdir" --workdir /workdir ${IMAGE_REPOSITORY}:${IMAGE_TAG}
+  - docker container run --name ${CONTAINER_NAME} --interactive --tty --detach --volume "$(pwd):/workdir" --workdir /workdir ${IMAGE_REPOSITORY}:${IMAGE_TAG}
 
 script:
-  - echo hello
+  - git remote add k8s ${CHART_REPO}
+  - git fetch k8s
+  - docker exec ${CONTAINER_NAME} ct lint --chart-dirs incubator --remote k8s
