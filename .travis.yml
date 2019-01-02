@@ -6,10 +6,9 @@ env:
   - IMAGE_REPOSITORY=quay.io/helmpack/chart-testing
 
 before_script:
-  - echo $IMAGE_TAG
-  - echo $IMAGE_REPOSITORY
+  - echo ${IMAGE_TAG}
+  - echo ${IMAGE_REPOSITORY}
+  - docker container run --interactive --tty --detach --volume "$(pwd):/workdir" --workdir /workdir ${IMAGE_REPOSITORY}:${IMAGE_TAG}
 
 script:
   - echo hello
-  - echo $IMAGE_TAG
-  - echo $IMAGE_REPOSITORY
