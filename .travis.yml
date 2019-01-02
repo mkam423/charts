@@ -9,8 +9,6 @@ env:
     - CONTAINER_NAME=chart_test
 
 before_script:
-  - echo ${IMAGE_TAG}
-  - echo ${IMAGE_REPOSITORY}
   - docker container run --name ${CONTAINER_NAME} --interactive --tty --detach --volume "$(pwd):/workdir" --workdir /workdir ${IMAGE_REPOSITORY}:${IMAGE_TAG}
 
 script:
