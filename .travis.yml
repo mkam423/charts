@@ -2,8 +2,9 @@ services:
   - docker
 
 env:
-  - IMAGE_TAG=v2.0.1
-  - IMAGE_REPOSITORY=quay.io/helmpack/chart-testing
+  global:
+    - IMAGE_TAG=v2.0.1
+    - IMAGE_REPOSITORY=quay.io/helmpack/chart-testing
 
 before_script:
   - echo ${IMAGE_TAG}
