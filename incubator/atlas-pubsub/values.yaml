@@ -47,7 +47,8 @@ tolerations: []
 
 affinity: {}
 
+# Change these to your base64 credentials
 aws:
-  accessKeyID: "id"
-  secretAccessKey: "key"
+  accessKeyID: Rk9PCg==
+  secretAccessKey: Rk9PCg==
   region: us-east-1

@@ -8,3 +8,9 @@ keywords:
 sources:
 - https://github.com/infobloxopen/atlas-pubsub
 version: 0.1.0
+home: https://github.com/infobloxopen/atlas-pubsub
+maintainers:
+- name: ZachEddy
+  email: zeddy@infoblox.com
+- name: mkam423
+  email: mkam@infoblox.com
