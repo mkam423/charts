@@ -4,7 +4,7 @@ services:
 env:
   global:
     - CHART_REPO=https://github.com/infobloxopen/charts
-    - IMAGE_TAG=v2.0.1
+    - IMAGE_TAG=v2.1.0
     - IMAGE_REPOSITORY=quay.io/helmpack/chart-testing
     - CONTAINER_NAME=chart_test
 
